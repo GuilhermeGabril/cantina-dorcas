@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import path from "path"; 
+import fs from 'fs';
 
 import vendaRoutes from './src/routes/vendaRoutes';
 import produtoRoutes from './src/routes/produtoRoutes';
@@ -12,9 +13,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ajuste aqui: Verifique se a pasta frontend está na raiz do seu projeto no GitHub
-// Se estiver, use:
-const publicPath = path.join(process.cwd(), "frontend", "public");
+const publicPath = path.join(__dirname, '..', 'frontend', 'public');
+if (!fs.existsSync(publicPath)) {
+  console.warn(`Static public path not found: ${publicPath}`);
+}
+console.log(`Serving static files from: ${publicPath}`);
 
 app.use(express.static(publicPath));
 
