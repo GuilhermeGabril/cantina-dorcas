@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.ts",
+      "src": "backend/server.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/vendas/(.*)",
-      "dest": "server.ts"
+      "dest": "backend/server.ts"
     },
     {
       "src": "/produtos/(.*)",
-      "dest": "server.ts"
+      "dest": "backend/server.ts"
     },
     {
       "src": "/(.*)",
-      "dest": "server.ts"
+      "dest": "backend/server.ts"
     }
   ]
 }
