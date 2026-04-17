@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5500'; // Mude para a URL da Vercel depois
+const API_URL = 'https://cantina-dorcas.vercel.app'; // Mude para a URL da Vercel depois
 let produtosDisponiveis = [];
 
 // 1. Carregar produtos ao iniciar
