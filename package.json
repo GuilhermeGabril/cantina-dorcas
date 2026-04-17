@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "workspaces": [
+    "backend"
+  ],
+  "scripts": {
+    "build": "cd backend && npm run build"
+  }
+}
