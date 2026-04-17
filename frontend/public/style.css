@@ -1,0 +1,123 @@
+:root {
+    --primary: #2ecc71;
+    --secondary: #3498db;
+    --bg: #f5f6fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 15px;
+}
+
+.container { max-width: 500px; margin: 0 auto; }
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Mantém uma em cada ponta */
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.logo-circle {
+    width: 90px;           /* Aumentei um pouco para aparecer melhor */
+    height: 90px;
+    background: white;     /* Fundo branco ajuda se a logo for transparente */
+    border-radius: 50%;    /* Faz o círculo perfeito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra leve para dar profundidade */
+    overflow: hidden;      /* Corta o que sobrar da imagem fora do círculo */
+    border: 3px solid var(--white); /* Borda branca para destacar */
+}
+
+.logo-img {
+    width: 85%;            /* Deixa um pequeno respiro dentro do círculo */
+    height: 85%;
+    object-fit: contain;   /* Garante que a logo apareça inteira sem achatar */
+}
+
+/* Ajuste opcional: centralizar o título "Nova Venda" */
+.venda-card h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+}
+
+.venda-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.produto-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary);
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px; /* Evita zoom automático no iOS */
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: var(--secondary); color: white; }
+
+.radio-group { display: flex; gap: 10px; margin-top: 10px; }
+
+.radio-card {
+    flex: 1;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.radio-card input { display: none; }
+.radio-card input:checked + span { color: var(--primary); font-weight: bold; }
+.radio-card:has(input:checked) { border-color: var(--primary); }
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}

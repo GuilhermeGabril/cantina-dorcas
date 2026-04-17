@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina - Lançamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+    <div class="logo-circle">
+        <img src="./img/Logo-sede.png" alt="Logo Igreja" class="logo-img">
+    </div>
+    <div class="logo-circle">
+        <img src="./img/Dorcas.png" alt="Logo Cantina" class="logo-img">
+    </div>
+</header>
+
+        <main class="venda-card">
+            <h2>Nova Venda</h2>
+
+            <div id="lista-produtos">
+                </div>
+
+            <button type="button" id="btn-adicionar" class="btn-secondary">
+                + Adicionar Produto
+            </button>
+
+            <hr>
+
+            <div class="pagamento-section">
+                <label>Forma de Pagamento</label>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="pagamento" value="PIX" checked>
+                        <span>PIX</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="pagamento" value="Dinheiro">
+                        <span>Dinheiro</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="total-section">
+                <span>Total:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+
+            <button id="btn-concluir" class="btn-primary">Concluir Venda</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
