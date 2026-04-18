@@ -66,23 +66,26 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
 }
-
 .produto-item {
     background: #f9f9f9;
-    padding: 15px;
+    padding: 20px; /* Aumentado para dar mais respiro */
     border-radius: 10px;
     margin-bottom: 15px;
     border-left: 5px solid var(--secondary);
+    width: 100%; /* Garante que respeite o pai */
 }
-
+/* Ajuste nos inputs e selects para não vazarem */
 select, input {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
+    margin-bottom: 10px; /* Espaço extra entre os campos */
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 16px; /* Evita zoom automático no iOS */
+    font-size: 16px;
+    display: block; /* Garante que ocupem a linha toda sozinhos */
 }
 
 .btn-primary, .btn-secondary {
@@ -120,4 +123,7 @@ select, input {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
+}
+* {
+    box-sizing: border-box;
 }
